@@ -1,12 +1,12 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:stav_d_meal_hub_dribbble_design_project/common_widgets/blur_container_widget.dart';
+import 'package:stav_d_meal_hub_dribbble_design_project/common_widgets/blur_rect_container_widget.dart';
 import 'package:stav_d_meal_hub_dribbble_design_project/constants/app_icons.dart';
 import 'package:stav_d_meal_hub_dribbble_design_project/constants/app_images.dart';
 import 'package:stav_d_meal_hub_dribbble_design_project/constants/app_titles.dart';
 import 'package:stav_d_meal_hub_dribbble_design_project/screens/order_screen/widgets/meals_stack_widget.dart';
 import 'package:stav_d_meal_hub_dribbble_design_project/screens/order_screen/widgets/status_blur_widget.dart';
-import '../../common_widgets/app_top_bar.dart';
+import '../../common_widgets/app_top_bar_widget.dart';
 import '../../constants/app_colors.dart';
 
 class OrderScreen extends StatelessWidget {
@@ -56,12 +56,12 @@ class OrderScreen extends StatelessWidget {
                 left: - screenSize.width * 0.03,
                 child: Transform.rotate(
                   angle: pi / -20,
-                  child: BlurContainer(
+                  child: BlurRectContainer(
                     borderRadius: screenSize.width * 0.1,
                     child: Container(
                       padding: EdgeInsets.all(10.0),
                       width: screenSize.width * 0.7,
-                      height: screenSize.width * 0.7,
+                      height: screenSize.width * 0.8,
                       color: AppColors.grey.withOpacity(0.3),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,6 +80,7 @@ class OrderScreen extends StatelessWidget {
                               vertical: 10.0,
                             ),
                             child: FittedBox(
+                              fit: BoxFit.cover,
                               child: Text(
                                 '${AppTitles.when}\n${AppTitles.time}',
                                 style: Theme.of(context).textTheme.displayLarge,
@@ -89,7 +90,7 @@ class OrderScreen extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              BlurContainer(
+                              BlurRectContainer(
                                 borderRadius: 70.0,
                                 child: Container(
                                   padding: EdgeInsets.all(4.0),
@@ -151,12 +152,13 @@ class OrderScreen extends StatelessWidget {
                 ),
               ),
               Positioned.fill(
+                bottom: 4.0,
                 child: Align(
                   alignment: Alignment.bottomCenter,
-                  child: BlurContainer(
+                  child: BlurRectContainer(
                     borderRadius: 70.0,
                     child: Container(
-                      width: screenSize.width * 0.7,
+                      width: 290.0,
                       padding: EdgeInsets.all(4.0),
                       color: AppColors.white.withOpacity(0.25),
                       child: Row(

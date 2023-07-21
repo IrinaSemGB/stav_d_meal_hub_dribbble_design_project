@@ -1,12 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
-import '../constants/app_colors.dart';
 
-class BlurContainer extends StatelessWidget {
+class BlurRectContainer extends StatelessWidget {
 
   final Widget child;
   final double borderRadius;
-  const BlurContainer({super.key, required this.child, required this.borderRadius});
+  const BlurRectContainer({super.key, required this.child, required this.borderRadius});
 
   @override
   Widget build(BuildContext context) {

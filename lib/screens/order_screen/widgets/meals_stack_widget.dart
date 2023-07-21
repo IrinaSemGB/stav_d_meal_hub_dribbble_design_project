@@ -18,8 +18,7 @@ class MealsStackWidget extends StatelessWidget {
           ),
           Positioned(
             right: 0.0,
-            child: MealImage(
-                image: AppImages.orderedDish_1),
+            child: MealImage(image: AppImages.orderedDish_1),
           ),
         ],
       ),

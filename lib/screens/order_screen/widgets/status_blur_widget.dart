@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../common_widgets/blur_container_widget.dart';
+import '../../../common_widgets/blur_rect_container_widget.dart';
 import '../../../constants/app_colors.dart';
 
 class StatusBlur extends StatelessWidget {
@@ -10,7 +10,7 @@ class StatusBlur extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlurContainer(
+    return BlurRectContainer(
       borderRadius: 70.0,
       child: Container(
         padding: EdgeInsets.symmetric(
@@ -21,10 +21,12 @@ class StatusBlur extends StatelessWidget {
           borderRadius: BorderRadius.circular(70.0),
           color: AppColors.white.withOpacity(0.2),
         ),
-        child: Text(
-          status,
-          style: Theme.of(context).textTheme.titleMedium?.copyWith(
-            fontWeight: FontWeight.normal,
+        child: FittedBox(
+          child: Text(
+            status,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.normal,
+            ),
           ),
         ),
       ),

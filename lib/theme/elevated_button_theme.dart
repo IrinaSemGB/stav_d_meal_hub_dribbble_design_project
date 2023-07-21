@@ -12,6 +12,7 @@ class AppElevatedButtonTheme {
       padding: EdgeInsets.all(25.0),
       foregroundColor: AppColors.white,
       backgroundColor: AppColors.white.withOpacity(0.2),
+      shadowColor: AppColors.white.withOpacity(0.2),
     ),
   );
 }
