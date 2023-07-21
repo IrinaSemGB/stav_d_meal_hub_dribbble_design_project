@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../common_widgets/blur_rect_container_widget.dart';
-import '../../../constants/app_colors.dart';
+import '../../../../common_widgets/blur_rect_container_widget.dart';
+import '../../../../constants/app_colors.dart';
 
 class StatusBlur extends StatelessWidget {
 

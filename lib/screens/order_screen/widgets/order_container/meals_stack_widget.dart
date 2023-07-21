@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../../../constants/app_images.dart';
+import '../../../../constants/app_images.dart';
 import 'meal_image_widget.dart';
 
 class MealsStackWidget extends StatelessWidget {

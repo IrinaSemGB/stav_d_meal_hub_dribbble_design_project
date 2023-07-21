@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:stav_d_meal_hub_dribbble_design_project/common_widgets/blur_circle_container_widget.dart';
-import '../../../constants/app_colors.dart';
+import '../../../../constants/app_colors.dart';
 
 class MealImage extends StatelessWidget {
 
