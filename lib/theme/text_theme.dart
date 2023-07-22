@@ -23,9 +23,11 @@ class AppTextTheme {
     ),
 
     // Today 12:30 - 14:30
-    displayLarge: GoogleFonts.questrial(
+    displayLarge: GoogleFonts.roboto(
       color: AppColors.white,
       fontSize: 40.0,
+      fontWeight: FontWeight.w500,
+      wordSpacing: -2.5,
     ),
   );
 }

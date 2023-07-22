@@ -4,18 +4,21 @@ import '../constants/app_icons.dart';
 import 'blur_rect_container_widget.dart';
 
 class BottomTabBar extends StatelessWidget {
-  const BottomTabBar({super.key});
+
+  final double height;
+  const BottomTabBar({super.key, required this.height});
 
   @override
   Widget build(BuildContext context) {
     return BlurRectContainer(
-      borderRadius: 70.0,
+      borderRadius: height,
       child: Container(
-        width: 290.0,
+        height: height,
+        width: height * 3,
         padding: EdgeInsets.all(4.0),
         color: AppColors.white.withOpacity(0.25),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             ElevatedButton(
               onPressed: () {
@@ -24,16 +27,15 @@ class BottomTabBar extends StatelessWidget {
               style: Theme.of(context).elevatedButtonTheme.style?.copyWith(
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
                 padding: MaterialStateProperty.all(
-                  EdgeInsets.all(25.0),
+                  EdgeInsets.all(height * 0.3),
                 ),
               ),
               child: Image(
                 image: AssetImage(AppIcons.home),
-                width: 40.0,
-                height: 40.0,
+                width: height * 0.3,
               ),
             ),
-            SizedBox(width: 4.0),
+            SizedBox(width: 1.0),
             ElevatedButton(
               onPressed: () {
                 // TODO realisation
@@ -41,16 +43,15 @@ class BottomTabBar extends StatelessWidget {
               style: Theme.of(context).elevatedButtonTheme.style?.copyWith(
                 backgroundColor: MaterialStateProperty.all<Color>(AppColors.accent),
                 padding: MaterialStateProperty.all(
-                  EdgeInsets.all(32.0),
+                  EdgeInsets.all(height * 0.3),
                 ),
               ),
               child: Image(
                 image: AssetImage(AppIcons.box),
-                width: 25.0,
-                height: 25.0,
+                width: height * 0.3,
               ),
             ),
-            SizedBox(width: 4.0),
+            SizedBox(width: 1.0),
             ElevatedButton(
               onPressed: () {
                 // TODO realisation
@@ -58,13 +59,12 @@ class BottomTabBar extends StatelessWidget {
               style: Theme.of(context).elevatedButtonTheme.style?.copyWith(
                 backgroundColor: MaterialStateProperty.all<Color>(Colors.transparent),
                 padding: MaterialStateProperty.all(
-                  EdgeInsets.all(32.0),
+                  EdgeInsets.all(height * 0.3),
                 ),
               ),
               child: Image(
                 image: AssetImage(AppIcons.account),
-                width: 26.0,
-                height: 26.0,
+                width: height * 0.3,
               ),
             ),
           ],
